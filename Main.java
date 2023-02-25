@@ -1,20 +1,25 @@
-import java.sql.SQLOutput;
+class Human{
+    private int age;
+    private String name;
 
-class Mobile{
-    String name;
-    int price;
-    String color;
-    public void show(){
-        System.out.println(name + ":"+ price +":"+ color);
+    public int getAge(){
+        return age;
+    }
+    public void setAge(int a){
+        age =a;
+    }
+    public String getName(){
+        return name;
+    }
+    public void setName(String s){
+        name=s;
     }
 }
-public class Main {
+class Main{
     public static void main(String a[]){
-        Mobile m1 = new Mobile();
-         m1.name = "Samsung";
-         m1.price = 1200;
-         m1.color="black";
-         m1.show();
-
+        Human obj = new Human();
+        obj.setAge(28);
+        obj.setName("sri");
+        System.out.println(obj.getAge()+":"+obj.getName());
     }
 }
